@@ -1,4 +1,5 @@
 @janken = nil
+@attimuite = nil
 
 def janken 
   jan = ["グー","チョキ","パー"]
@@ -49,7 +50,7 @@ def attimuite
     puts "あいて：#{hoi[enemy_direction]}"
     puts "------------------------------------"
     if direction == enemy_direction
-      return true
+      @attimuite = true
     else
       puts "じゃんけん．．．"
       janken
@@ -63,7 +64,7 @@ end
 
 puts "じゃんけん．．．"
 janken
-if @janken == true && attimuite == true
+if @janken == true && @attimuite == true
   puts "あなたの勝利です"
 else
   puts "あなたの敗北です"
